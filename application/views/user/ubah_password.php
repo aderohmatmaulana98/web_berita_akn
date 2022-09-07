@@ -3,12 +3,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Dashboard</h1>
+                    <h1 class="m-0">Ubah Password</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item active">Dashboard v1</li>
+                        <li class="breadcrumb-item active">Ubah Password</li>
                     </ol>
                 </div>
             </div>
@@ -17,22 +17,24 @@
 
     <section class="content">
         <div class="container-fluid">
+            <?= $this->session->flashdata('message');  ?>
             <div class="row">
-                <?= $this->session->flashdata('message');  ?>
                 <div class="card p-3 col-lg-10 shadow">
-                    <?= $this->session->flashdata('message');  ?>
-                    <form action="<?= base_url('user/ubah_password') ?>" method="POST">
+                    <form action="<?= base_url('admin/ubah_password') ?>" method="POST">
                         <div class="form-group">
-                            <label for="pass_saat_ini">Password Saat Ini</label>
-                            <input type="text" class="form-control" id="pass_saat_ini" name="pass_saat_ini">
+                            <label for="current_password">Password Saat Ini</label>
+                            <input type="password" class="form-control" id="current_password" name="current_password">
+                            <?= form_error('current_password', '<small class="text-danger">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="pass_baru">Password Baru</label>
-                            <input type="text" class="form-control" name="pass_baru" id="pass_baru">
+                            <label for="new_password1">Password Baru</label>
+                            <input type="password" class="form-control" name="new_password1" id="new_password1">
+                            <?= form_error('new_password1', '<small class="text-danger">', '</small>'); ?>
                         </div>
                         <div class="form-group">
-                            <label for="ulangi_password">Ulangi Password</label>
-                            <input type="text" class="form-control" name="ulangi_password" id="ulangi_password">
+                            <label for="new_password2">Ulangi Password</label>
+                            <input type="password" class="form-control" name="new_password2" id="new_password2">
+                            <?= form_error('new_password2', '<small class="text-danger">', '</small>'); ?>
                         </div>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>

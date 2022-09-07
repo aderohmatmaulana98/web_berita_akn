@@ -1,4 +1,5 @@
 <!--Page Title-->
+<?php echo $this->session->flashdata('success'); ?>
 <section class="page-title" style="background-image:url(assets/images/background/featured-2-bg.jpg);">
     <div class="auto-container">
         <h1>Hubungi Kami</h1>
@@ -58,12 +59,8 @@
 
                     <h3>Hubungi Kami</h3>
                     <div class="text"> Email : <a href="mailto:info@aknyogya.ac.id">info@aknyogya.ac.id</a> <br>Website
-                        : <a href="https://aknyogya.ac.id/">aknyogya.ac.id</a> <br> Facebook : <a
-                            href="https://www.facebook.com/Akademi-Komunitas-Negeri-Seni-dan-Budaya-Yogyakarta-105047325048412">Akademi
-                            Komunitas Negeri Seni dan Budaya Yogyakarta</a> <br> Instagram : <a
-                            href="https://www.instagram.com/aknsb.yogyakarta/">aknsb.yogyakarta</a> <br> Twitter : <a
-                            href="https://aknyogya.ac.id/">Twitter</a><br> Youtube : <a
-                            href="https://aknyogya.ac.id/">Youtube</a> </div>
+                        : <a href="https://aknyogya.ac.id/">aknyogya.ac.id</a> <br> Facebook : <a href="https://www.facebook.com/Akademi-Komunitas-Negeri-Seni-dan-Budaya-Yogyakarta-105047325048412">Akademi
+                            Komunitas Negeri Seni dan Budaya Yogyakarta</a> <br> Instagram : <a href="https://www.instagram.com/aknsb.yogyakarta/">aknsb.yogyakarta</a> <br> Twitter : <a href="https://aknyogya.ac.id/">Twitter</a><br> Youtube : <a href="https://aknyogya.ac.id/">Youtube</a> </div>
                 </div>
             </div>
 
@@ -82,7 +79,40 @@
     </div>
 </section>
 
-
+<section style="margin-bottom: 50px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="row">
+                    <span class="col-lg-6">
+                        <img src="<?= base_url('assets/images/akn/ilustration/question.png') ?>" alt="">
+                    </span>
+                    <span>
+                        <h1>Kirim Pesan, Saran Atau Masukan Kepada Kami</h1>
+                    </span>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <form action="<?= base_url('home/kirim_pesan') ?>" method="POST">
+                    <div class="form-group">
+                        <label for="nama_lengkap">Nama Lengkap</label>
+                        <input type="text" class="form-control" id="nama_lengkap" name="nama_lengkap" aria-describedby="nama_lengkap" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" aria-describedby="email" required>
+                        <small id="emailHelp" class="form-text text-muted">Kami tidak akan pernah membagikan email Anda kepada orang lain.</small>
+                    </div>
+                    <div class="form-group">
+                        <label for="pertanyaan">Pertanyaan</label>
+                        <textarea name="pertanyaan" class="form-control" id="pertanyaan" cols="30" rows="10" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 <!--Map Section-->
@@ -90,9 +120,7 @@
     <div class="map-outer">
 
         <!--Map Canvas-->
-        <div class="map-canvas" <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.4964673133286!2d110.35969181372684!3d-7.842992394348865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a564ea4260f97%3A0x89a93db937c4021a!2sAkademi%20Komunitas%20Negeri%20Seni%20Dan%20Budaya%20Yogyakarta!5e0!3m2!1sid!2sid!4v1646893580583!5m2!1sid!2sid"
-            width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        <div class="map-canvas" <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.4964673133286!2d110.35969181372684!3d-7.842992394348865!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a564ea4260f97%3A0x89a93db937c4021a!2sAkademi%20Komunitas%20Negeri%20Seni%20Dan%20Budaya%20Yogyakarta!5e0!3m2!1sid!2sid!4v1646893580583!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
 
 

@@ -28,26 +28,31 @@
                                     <th>Nama</th>
                                     <th>Email</th>
                                     <th>Pesan</th>
-                                    <th>Privasi</th>
                                     <th>Status</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>1</td>
-                                    <td>Olahraga</td>
-                                    <td>Olahraga</td>
-                                    <td>Olahraga</td>
-                                    <td>Olahraga</td>
-                                    <td>Olahraga</td>
-                                    <td>Olahraga</td>
-                                    <td class="text-center">
-                                        <a href="#" class="badge badge-pill badge-success"><i class="fas fa-edit"></i> Edit</a>
-                                        <a href="#" class="badge badge-pill badge-danger"><i class="fas fa-trash"></i> Hapus</a>
-                                        <a href="#" class="badge badge-pill badge-primary"><i class="fas fa-trash"></i> Balas</a>
-                                    </td>
-                                </tr>
+                                <?php $no = 1;
+                                foreach ($inbox as $i) :  ?>
+                                    <tr>
+                                        <td><?= $no; ?></td>
+                                        <td><?= date('d-M-Y', $i['date_created']) ?></td>
+                                        <td><?= $i['nama_lengkap'] ?></td>
+                                        <td><?= $i['email'] ?></td>
+                                        <td><?= $i['pertanyaan'] ?></td>
+                                        <?php if ($i['status'] == 1) : ?>
+                                            <td><span class="badge badge-success">Sudah dibalas</span></td>
+                                        <?php else : ?>
+                                            <td><span class="badge badge-success">Belum dibalas</span></td>
+                                        <?php endif; ?>
+                                        <td class="text-center">
+                                            <a href="#" class="badge badge-pill badge-success"><i class="fas fa-edit"></i> Edit</a>
+                                            <a href="#" class="badge badge-pill badge-danger"><i class="fas fa-trash"></i> Hapus</a>
+                                            <a href="#" class="badge badge-pill badge-primary"><i class="fas fa-trash"></i> Balas</a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach;  ?>
                             </tbody>
                         </table>
                     </div>

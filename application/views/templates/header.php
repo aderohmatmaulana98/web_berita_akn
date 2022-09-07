@@ -10,7 +10,7 @@
     <link href="<?= base_url('assets/css/style.css') ?>" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <!--Favicon-->
     <link rel="shortcut icon" href="<?= base_url('assets/images/akn/logo_akn_tulisan_putih.png') ?>" type="<?= base_url('assets/images/akn/logo_akn_tulisan_putih.png') ?>">
@@ -199,7 +199,6 @@
 
                                     </li>
                                     <li><a href="contact.html">Download</a></li>
-                                    <li><a href="">Login</a></li>
                                 </ul>
                             </div>
                         </nav><!-- Main Menu End-->

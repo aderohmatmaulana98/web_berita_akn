@@ -382,4 +382,27 @@ class Home extends CI_Controller
 		$this->load->view('home/mahasiswa_kriya');
 		$this->load->view('templates/footer');
 	}
+	public function kirim_pesan()
+	{
+		$nama_lengkap = $this->input->post('nama_lengkap');
+		$email = $this->input->post('email');
+		$pertanyaan = $this->input->post('pertanyaan');
+
+		$data = [
+			'nama_lengkap' => $nama_lengkap,
+			'email' => $email,
+			'pertanyaan' => $pertanyaan,
+			'status' => 0,
+			'date_created' => time()
+		];
+
+		$this->db->insert('inbox', $data);
+		$this->session->set_flashdata('success', "<script>
+		swal({
+		text: 'Pesan telah dikirim, balasan akan masuk ke email yang dimasukan.',
+		icon: 'success'
+		});
+	</script>");
+		redirect('home/kontak');
+	}
 }
