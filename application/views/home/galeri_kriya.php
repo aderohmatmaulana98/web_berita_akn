@@ -2,7 +2,7 @@
 
 <section class="page-title" style="background-image:url(assets/images/background/featured-2-bg.jpg);">
     <div class="auto-container">
-        <h1>Mahasiswa Kriya</h1>
+        <h1> Galeri Mahasiswa Kriya</h1>
     </div>
 
     <!--page-info-->
@@ -13,7 +13,7 @@
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <ul class="bread-crumb clearfix">
                         <li><a href="<?= base_url('home/mencari_mahasiswa'); ?>">Home</a></li>
-                        <li class="active">Mahasiswa Kriya</li>
+                        <li class="active">Galeri Mahasiswa Kriya</li>
                     </ul>
                 </div>
 
@@ -31,13 +31,13 @@
                 <!-- <div class="column col-md-4 col-sm-8 col-xs-12"> -->
                 <div class="news-style-two col-md-4 col-sm-6 col-xs-12">
                     <div class="service-block-five1 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <a href="<?= base_url('home/mencari_mahasiswa') ?>">
+                        <a href="<?= base_url('home/detail_galeri') ?>">
                             <div class="inner-box">
                                 <div class="sec-title-pmb">
                                     <br>
                                     <br>
                                     <br>
-                                    <h4>Data Mahasiswa</h4>
+                                    <h4>AK 19</h4>
                                     <br>
                                     <br>
                                     <br>
@@ -56,7 +56,7 @@
                                     <br>
                                     <br>
                                     <br>
-                                    <h4>LULUSAN</h4>
+                                    <h4>AK 20</h4>
                                     <br>
                                     <br>
                                     <br>
@@ -76,7 +76,7 @@
                                     <br>
                                     <br>
                                     <br>
-                                    <h4>Kepuasan</h4>
+                                    <h4>AK 21</h4>
                                     <br>
                                     <br>
                                     <br>

@@ -6,6 +6,7 @@
     <title>Akademik Komunitas Negeri Seni Dan Budaya Yogyakarta</title>
     <!-- Stylesheets -->
     <link href="<?= base_url('assets/css/bootstrap.css') ?>" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css" rel="stylesheet">
     <link href="<?= base_url('assets/css/revolution-slider.css') ?>" rel="stylesheet">
     <link href="<?= base_url('assets/css/style.css') ?>" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
@@ -13,14 +14,23 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.min.css">
     <!--Favicon-->
-    <link rel="shortcut icon" href="<?= base_url('assets/images/akn/logo_akn_tulisan_putih.png') ?>" type="<?= base_url('assets/images/akn/logo_akn_tulisan_putih.png') ?>">
-    <link rel="icon" href="<?= base_url('assets/images/akn/logo_akn_tulisan_putih.png') ?>" type="<?= base_url('assets/image/x-icon') ?>">
+    <link rel="shortcut icon" href="<?= base_url('assets/images/akn/logo_akn_tulisan_putih.png') ?>"
+        type="<?= base_url('assets/images/akn/logo_akn_tulisan_putih.png') ?>">
+    <link rel="icon" href="<?= base_url('assets/images/akn/logo_akn_tulisan_putih.png') ?>"
+        type="<?= base_url('assets/image/x-icon') ?>">
     <!-- Responsive -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <link href="<?= base_url('assets/css/responsive.css') ?>" rel="stylesheet">
     <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
     <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+
+    <link rel="stylesheet"
+        href="<?= base_url('assets_admin/') ?>plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet"
+        href="<?= base_url('assets_admin/') ?>plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+    <link rel="stylesheet"
+        href="<?= base_url('assets_admin/') ?>plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
 </head>
 
 <body>
@@ -51,7 +61,8 @@
                     <div class="clearfix">
 
                         <div class="pull-left logo-outer">
-                            <div class="logo"><a href="index.html"><img src="<?= base_url('assets/images/logo.png') ?>" width="200px" height="60px" alt="AKN" title="AKN"></a></div>
+                            <div class="logo"><a href="index.html"><img src="<?= base_url('assets/images/logo.png') ?>"
+                                        width="200px" height="60px" alt="AKN" title="AKN"></a></div>
                         </div>
 
                         <div class="pull-right upper-right clearfix">
@@ -61,7 +72,8 @@
                                 <nav class="main-menu">
                                     <div class="navbar-header">
                                         <!-- Toggle Button -->
-                                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                            data-target=".navbar-collapse">
                                             <span class="icon-bar"></span>
                                             <span class="icon-bar"></span>
                                             <span class="icon-bar"></span>
@@ -99,10 +111,16 @@
                                                             Karawitan</a></li>
                                                     <li><a href="#">Prodi Seni Kriya</a>
                                                         <ul>
-                                                            <li><a href="<?= base_url('home/kriya'); ?>">Profile Prodi Kriya</a></li>
-                                                            <li><a href="<?= base_url('home/mahasiswa_kriya'); ?>">Mahasiswa</a></li>
-                                                            <li><a href="<?= base_url('home/dosen_kriya'); ?>">Dosen</a></li>
-                                                            <li><a href="<?= base_url('home/galeri_kriya'); ?>">Galeri</a></li>
+                                                            <li><a href="<?= base_url('home/kriya'); ?>">Profile Prodi
+                                                                    Kriya</a></li>
+                                                            <li><a
+                                                                    href="<?= base_url('home/mahasiswa_kriya'); ?>">Mahasiswa</a>
+                                                            </li>
+                                                            <li><a href="<?= base_url('home/dosen_kriya'); ?>">Dosen</a>
+                                                            </li>
+                                                            <li><a
+                                                                    href="<?= base_url('home/galeri_kriya'); ?>">Galeri</a>
+                                                            </li>
                                                         </ul>
                                                     </li>
                                                 </ul>
@@ -146,7 +164,9 @@
                 <div class="auto-container clearfix">
                     <!--Logo-->
                     <div class="logo pull-left">
-                        <a href="index.html" class="img-responsive"><img src="<?= base_url('assets/images/logo-small.png') ?>" width="200px" height="50px" alt="Brighton" title="Brighton"></a>
+                        <a href="index.html" class="img-responsive"><img
+                                src="<?= base_url('assets/images/logo-small.png') ?>" width="200px" height="50px"
+                                alt="Brighton" title="Brighton"></a>
                     </div>
 
                     <!--Right Col-->
@@ -155,7 +175,8 @@
                         <nav class="main-menu">
                             <div class="navbar-header">
                                 <!-- Toggle Button -->
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                    data-target=".navbar-collapse">
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>

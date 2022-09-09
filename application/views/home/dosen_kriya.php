@@ -2,7 +2,7 @@
 
 <section class="page-title" style="background-image:url(assets/images/background/featured-2-bg.jpg);">
     <div class="auto-container">
-        <h1>Mahasiswa Kriya</h1>
+        <h1>Dosen Kriya</h1>
     </div>
 
     <!--page-info-->
@@ -31,13 +31,13 @@
                 <!-- <div class="column col-md-4 col-sm-8 col-xs-12"> -->
                 <div class="news-style-two col-md-4 col-sm-6 col-xs-12">
                     <div class="service-block-five1 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <a href="<?= base_url('home/mencari_mahasiswa') ?>">
+                        <a href="<?= base_url('home/datadosen') ?>">
                             <div class="inner-box">
                                 <div class="sec-title-pmb">
                                     <br>
                                     <br>
                                     <br>
-                                    <h4>Data Mahasiswa</h4>
+                                    <h4>Data Dosen</h4>
                                     <br>
                                     <br>
                                     <br>
@@ -70,7 +70,7 @@
 
                 <div class="news-style-two col-md-4 col-sm-6 col-xs-12">
                     <div class="service-block-five1 wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1500ms">
-                        <a href="<?= base_url('home/kepuasan') ?>">
+                        <a href="#">
                             <div class="inner-box">
                                 <div class="sec-title-pmb">
                                     <br>

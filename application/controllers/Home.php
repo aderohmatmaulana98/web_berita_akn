@@ -405,4 +405,63 @@ class Home extends CI_Controller
 	</script>");
 		redirect('home/kontak');
 	}
+
+	public function mencari_mahasiswa()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('home/mencari_mahasiswa');
+		$this->load->view('templates/footer');
+	}
+
+	public function lulusan()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('home/lulusan');
+		$this->load->view('templates/footer');
+	}
+
+	public function dosen_kriya()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('home/dosen_kriya');
+		$this->load->view('templates/footer');
+	}
+
+	public function datadosen()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('home/datadosen');
+		$this->load->view('templates/footer');
+	}
+
+
+	public function kepuasan()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('home/kepuasan');
+		$this->load->view('templates/footer');
+	}
+
+
+	public function galeri_kriya()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('home/galeri_kriya');
+		$this->load->view('templates/footer');
+	}
+
+	public function detail_galeri()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('home/detail_galeri');
+		$this->load->view('templates/footer');
+	}
+
+	public function detail_project()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('home/detail_project');
+		$this->load->view('templates/sidebar');
+		$this->load->view('templates/footer');
+	}
 }
