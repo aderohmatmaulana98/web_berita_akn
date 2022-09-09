@@ -10,7 +10,8 @@
         <!-- Sidebar user panel (optional) -->
         <div class="mt-2">
             <div class="text-center mx-auto brand-link text-center">
-                <img class="mx-auto d-block img-fluid" src="<?= base_url('assets_admin/img/logo_akn_tulisan_putih.png') ?>" width="100" alt="">
+                <img class="mx-auto d-block img-fluid"
+                    src="<?= base_url('assets_admin/img/logo_akn_tulisan_putih.png') ?>" width="100" alt="">
                 <p class="text-center mx-auto">AKN SENI DAN BUDAYA <br> YOGYAKARTA</p>
             </div>
         </div>
@@ -119,7 +120,7 @@
                     </a>
                     <ul class="nav nav-treeview">
                         <li class="nav-item">
-                            <a href="<?= base_url('admin/slide') ?>" class="nav-link">
+                            <a href="<?= base_url('admin/tampilan') ?>" class="nav-link">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Slide</p>
                             </a>
