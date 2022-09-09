@@ -39,7 +39,8 @@
                                         </button>
                                     </div>
                                     <div class="modal-body">
-                                        <form action="<?= base_url('admin/add_tampilan') ?>" method="POST">
+                                        <form action="<?= base_url('admin/add_tampilan') ?>" method="POST"
+                                            enctype="multipart/form-data">
                                             <div class="form-group">
                                                 <label for="judul">Judul</label>
                                                 <input type="text" class="form-control" id="judul" name="judul">
@@ -83,7 +84,8 @@
                                     <td><?= $i; ?></td>
                                     <td><?= $tp['judul'] ?></td>
                                     <td><?= $tp['link'] ?></td>
-                                    <td><?= $tp['gambar'] ?></td>
+                                    <td><img src="<?= base_url('assets_admin/img/tampilan/') . $tp['gambar']; ?>" alt=""
+                                            srcset="" height="50" width="50"></td>
                                     <td><?= $tp['update_created'] ?></td>
                                     <td><?= $tp['date_created'] ?></td>
                                     <td>

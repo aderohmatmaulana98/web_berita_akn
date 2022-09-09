@@ -254,6 +254,8 @@ class Admin extends CI_Controller
       </div>');
 		redirect('admin/agenda');
 	}
+
+
 	public function komentar_post()
 	{
 		$data['title'] = 'Komentar Post';
@@ -1051,6 +1053,7 @@ class Admin extends CI_Controller
 			['email' => $this->session->userdata('email')]
 		)->row_array();
 
+		$data['tampilan'] = $this->db->get('tampilan')->result_array();
 
 		$judul = $this->input->post('judul');
 		$link = $this->input->post('link');
@@ -1058,6 +1061,8 @@ class Admin extends CI_Controller
 		$gambar = $_FILES['gambar'];
 
 		if ($gambar = '') {
+			var_dump($gambar);
+			die;
 		} else {
 			$config['allowed_types']        = 'jpg|png|jpeg';
 			$config['max_size'] = '2048';
@@ -1078,7 +1083,7 @@ class Admin extends CI_Controller
 			'judul' => $judul,
 			'link' => $link,
 			'date_created' => time(),
-			'gambar' => $gambar,
+			'gambar' => $gambar
 
 		];
 		$this->db->insert('tampilan', $data);
