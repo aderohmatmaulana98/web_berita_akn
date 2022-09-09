@@ -202,14 +202,17 @@
                                     <li class="dropdown"><a href="#">Program Studi</a>
                                         <ul>
                                             <li><a href="<?= base_url('home/tari'); ?>">Prodi Seni Tari</a></li>
-                                            <li><a href="<?= base_url('home/karawitan'); ?>">Prodi Seni Karawitan</a>
-                                            </li>
+                                            <li><a href="<?= base_url('home/karawitan'); ?>">Prodi Seni
+                                                    Karawitan</a></li>
                                             <li><a href="#">Prodi Seni Kriya</a>
                                                 <ul>
-                                                    <li><a href="<?= base_url('home/tari'); ?>">Prodi Seni Tari</a></li>
-                                                    <li><a href="<?= base_url('home/karawitan'); ?>">Prodi Seni
-                                                            Karawitan</a></li>
-                                                    <li><a href="<?= base_url('home/kriya'); ?>">Prodi Seni Kriya</a>
+                                                    <li><a href="<?= base_url('home/kriya'); ?>">Profile Prodi
+                                                            Kriya</a></li>
+                                                    <li><a href="<?= base_url('home/mahasiswa_kriya'); ?>">Mahasiswa</a>
+                                                    </li>
+                                                    <li><a href="<?= base_url('home/dosen_kriya'); ?>">Dosen</a>
+                                                    </li>
+                                                    <li><a href="<?= base_url('home/galeri_kriya'); ?>">Galeri</a>
                                                     </li>
                                                 </ul>
                                             </li>
