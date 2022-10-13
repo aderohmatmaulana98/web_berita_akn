@@ -254,6 +254,8 @@ class Admin extends CI_Controller
       </div>');
 		redirect('admin/agenda');
 	}
+
+
 	public function komentar_post()
 	{
 		$data['title'] = 'Komentar Post';
@@ -378,6 +380,37 @@ class Admin extends CI_Controller
 		  </div>');
 		redirect('admin/kategori');
 	}
+
+
+
+	public function editkategori()
+	{
+
+		$data = [
+
+			"nama_kategori" => $this->input->post('nama_kategori')
+
+		];
+
+		$this->db->where('id', $this->input->post('id'));
+		$this->db->update('kategori', $data);
+
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+          Kategori Diubah</div>');
+		redirect('admin/kategori');
+	}
+
+
+	public function hapuskategori($id)
+	{
+		$this->db->delete('kategori', array('id' => $id));
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+       Kategori berhasil di hapus !
+          </div>');
+		redirect('admin/kategori/');
+	}
+
+
 	public function post_berita()
 	{
 		$data['title'] = 'Post Berita';
@@ -819,8 +852,6 @@ class Admin extends CI_Controller
 			['email' => $this->session->userdata('email')]
 		)->row_array();
 
-		$author = $data['user']['nama'];
-
 		$id = $this->input->post('id');
 		$nama_agenda = $this->input->post('nama_agenda');
 		$deskripsi = $this->input->post('deskripsi');
@@ -990,24 +1021,37 @@ class Admin extends CI_Controller
 			}
 		}
 	}
+<<<<<<< HEAD
 	public function kirim_balasan()
 	{
 		$email = $this->input->post('email');
 		$balasan = $this->input->post('balas_pesan');
 	}
 	public function buat_akun_dosen()
+=======
+
+
+	public function tampilan()
+>>>>>>> d73a2bce5899e15d6671bb359156918239dfc96d
 	{
 		$data['user'] = $this->db->get_where(
 			'users',
 			['email' => $this->session->userdata('email')]
 		)->row_array();
+<<<<<<< HEAD
 		$data['title'] = 'Buat akun dosen/instruktur';
 
 		$data['users'] = $this->db->query("SELECT users.* FROM users WHERE users.role_id = 2 OR users.role_id = 3")->result_array();
+=======
+		$data['title'] = 'Tampilan';
+		$data['tampilan'] = $this->db->get('tampilan')->result_array();
+
+>>>>>>> d73a2bce5899e15d6671bb359156918239dfc96d
 
 		$this->load->view('template/header', $data);
 		$this->load->view('template/topbar', $data);
 		$this->load->view('template/sidebar', $data);
+<<<<<<< HEAD
 		$this->load->view('admin/buat_akun_dosen', $data);
 		$this->load->view('template/footer');
 	}
@@ -1047,11 +1091,20 @@ class Admin extends CI_Controller
 		redirect('admin/buat_akun_dosen');
 	}
 	public function buat_akun_mahasiswa()
+=======
+		$this->load->view('admin/tampilan', $data);
+		$this->load->view('template/footer');
+	}
+
+
+	public function add_tampilan()
+>>>>>>> d73a2bce5899e15d6671bb359156918239dfc96d
 	{
 		$data['user'] = $this->db->get_where(
 			'users',
 			['email' => $this->session->userdata('email')]
 		)->row_array();
+<<<<<<< HEAD
 		$data['title'] = 'Data mahasiswa';
 
 		$data['users'] = $this->db->get_where('users', ['role_id' => 4])->result_array();
@@ -1153,3 +1206,107 @@ class Admin extends CI_Controller
 		redirect('admin/matakuliah');
 	}
 }
+=======
+
+		$data['tampilan'] = $this->db->get('tampilan')->result_array();
+
+		$judul = $this->input->post('judul');
+		$link = $this->input->post('link');
+
+		$gambar = $_FILES['gambar'];
+
+		if ($gambar = '') {
+			var_dump($gambar);
+			die;
+		} else {
+			$config['allowed_types']        = 'jpg|png|jpeg';
+			$config['max_size'] = '2048';
+			$config['upload_path'] = './assets_admin/img/tampilan/';
+			$this->upload->initialize($config);
+
+			if (!$this->upload->do_upload('gambar')) {
+
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Harap isi gambar</div>');
+				redirect('admin/tampilan');
+			} else {
+
+				$gambar = $this->upload->data('file_name');
+			}
+		}
+
+		$data = [
+			'judul' => $judul,
+			'link' => $link,
+			'date_created' => time(),
+			'gambar' => $gambar
+
+		];
+		$this->db->insert('tampilan', $data);
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+        Agenda berhasil ditambahkan !
+      </div>');
+		redirect('admin/tampilan');
+	}
+
+
+	public function ubah_tampilan()
+	{
+		$id = $this->input->post('id');
+		$judul = $this->input->post('judul');
+		$link = $this->input->post('link');
+		$gambar = $_FILES['gambar']['name'];
+
+
+		$data['tampilan'] = $this->db->get('tampilan')->result_array();
+		//ika ada gambar yang di upload
+
+		if ($gambar) {
+			$config['upload_path']          = './assets_admin/img/tampilan';
+			$config['allowed_types']        = 'gif|jpg|png|jpeg';
+			$config['max_size']             = 2048;
+
+			$this->upload->initialize($config);
+
+
+			if (!$this->upload->do_upload('gambar')) {
+
+				$this->session->set_flashdata('message', '<div class="alert alert-danger" role="alert">Harap isi gambar</div>');
+				redirect('admin/tampilan');
+			} else {
+
+				$gambar = $this->upload->data('file_name');
+			}
+		}
+
+
+		$data = [
+			'judul' => $judul,
+			'update_created' => time(),
+			'link' => $link,
+			'gambar' => $gambar
+		];
+
+		$this->db->where('id', $id);
+		$this->db->update('tampilan', $data);
+
+		$this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+        Tampilan telah <strong>diubah.</strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button></div>');
+		redirect('admin/tampilan/');
+	}
+
+	public function hapus_tampilan($id)
+	{
+		$this->db->where('id', $id);
+		$this->db->delete('tampilan');
+		$this->session->set_flashdata('message', '<div class="alert alert-success alert-dismissible fade show" role="alert">
+        tampilan telah <strong>dihapus.</strong> 
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button></div>');
+		redirect("admin/tampilan");
+	}
+}
+>>>>>>> d73a2bce5899e15d6671bb359156918239dfc96d
