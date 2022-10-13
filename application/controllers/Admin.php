@@ -806,7 +806,6 @@ class Admin extends CI_Controller
 		$this->db->where('id', $id);
 		$this->db->update('pengumuman', $isi);
 
-
 		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
 			Pengumuman berhasil diubah! !
 		  </div>');
@@ -830,7 +829,6 @@ class Admin extends CI_Controller
 		$tempat = $this->input->post('tempat');
 		$waktu = $this->input->post('waktu');
 		$keterangan = $this->input->post('keterangan');
-
 
 		$gambar = $_FILES['gambar'];
 
@@ -885,9 +883,6 @@ class Admin extends CI_Controller
 		$id = $this->input->post('id');
 		$nama_fakultas = $this->input->post('nama_fakultas');
 		$kode_fakultas = $this->input->post('kode_fakultas');
-
-
-
 
 		$data = [
 			'nama_fakultas' => $nama_fakultas,
@@ -994,5 +989,167 @@ class Admin extends CI_Controller
 				}
 			}
 		}
+	}
+	public function kirim_balasan()
+	{
+		$email = $this->input->post('email');
+		$balasan = $this->input->post('balas_pesan');
+	}
+	public function buat_akun_dosen()
+	{
+		$data['user'] = $this->db->get_where(
+			'users',
+			['email' => $this->session->userdata('email')]
+		)->row_array();
+		$data['title'] = 'Buat akun dosen/instruktur';
+
+		$data['users'] = $this->db->query("SELECT users.* FROM users WHERE users.role_id = 2 OR users.role_id = 3")->result_array();
+
+		$this->load->view('template/header', $data);
+		$this->load->view('template/topbar', $data);
+		$this->load->view('template/sidebar', $data);
+		$this->load->view('admin/buat_akun_dosen', $data);
+		$this->load->view('template/footer');
+	}
+	public function add_akun_dosen()
+	{
+		$nip = $this->input->post('nip');
+		$nama_lengkap = $this->input->post('nama_lengkap');
+		$username = $this->input->post('username');
+		$email = $this->input->post('email');
+		$password = password_hash($this->input->post('password'), PASSWORD_DEFAULT);
+		$role = $this->input->post('role');
+		$instansi = $this->input->post('instansi');
+		$status = $this->input->post('status');
+		$jabatan = $this->input->post('jabatan');
+		$alamat = $this->input->post('alamat');
+
+		$data = [
+			'nip' => $nip,
+			'nama' => $nama_lengkap,
+			'username' => $username,
+			'email' => $email,
+			'password' => $password,
+			'role_id' => $role,
+			'instansi' => $instansi,
+			'status' => $status,
+			'jabatan' => $jabatan,
+			'alamat' => $alamat,
+			'is_active' => 1,
+			'date_created' => time(),
+			'image' => 'profil.png'
+		];
+
+		$this->db->insert('users', $data);
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+			Akun berhasi dibuat!
+		  </div>');
+		redirect('admin/buat_akun_dosen');
+	}
+	public function buat_akun_mahasiswa()
+	{
+		$data['user'] = $this->db->get_where(
+			'users',
+			['email' => $this->session->userdata('email')]
+		)->row_array();
+		$data['title'] = 'Data mahasiswa';
+
+		$data['users'] = $this->db->get_where('users', ['role_id' => 4])->result_array();
+
+		$this->load->view('template/header', $data);
+		$this->load->view('template/topbar', $data);
+		$this->load->view('template/sidebar', $data);
+		$this->load->view('admin/buat_akun_mahasiswa', $data);
+		$this->load->view('template/footer');
+	}
+	public function add_mahasiswa()
+	{
+		$data['user'] = $this->db->get_where(
+			'users',
+			['email' => $this->session->userdata('email')]
+		)->row_array();
+		$data['title'] = 'Buat akun mahasiswa';
+
+		$data['prodi'] = $this->db->get('prodi')->result_array();
+
+		$this->load->view('template/header', $data);
+		$this->load->view('template/topbar', $data);
+		$this->load->view('template/sidebar', $data);
+		$this->load->view('admin/form_add_mahasiswa', $data);
+		$this->load->view('template/footer');
+	}
+	public function aksi_add_mahasiswa()
+	{
+		$nim = $this->input->post('nim');
+		$nama = $this->input->post('nama');
+		$username = $this->input->post('username');
+		$instansi = $this->input->post('instansi');
+		$email = $this->input->post('email');
+		$password = $this->input->post('password');
+		$alamat = $this->input->post('alamat');
+		$aktif = $this->input->post('aktif');
+		$prodi = $this->input->post('prodi');
+
+		$data = [
+			'nip' => $nim,
+			'nama' => $nama,
+			'username' => $username,
+			'email' => $email,
+			'is_active' => 1,
+			'instansi' => $instansi,
+			'password' => $password,
+			'alamat' => $alamat,
+			'status' => $aktif,
+			'image' => 'profil.png',
+			'date_created' => time(),
+			'role_id' => 4,
+			'jabatan' => 'Mahasiswa',
+			'id_prodi' => $prodi
+		];
+
+		$this->db->insert('users', $data);
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+			Akun berhasi dibuat!
+		  </div>');
+		redirect('admin/add_mahasiswa');
+	}
+	public function matakuliah()
+	{
+		$data['user'] = $this->db->get_where(
+			'users',
+			['email' => $this->session->userdata('email')]
+		)->row_array();
+		$data['title'] = 'Matakuliah';
+
+		$data['tahun_ajaran'] = $this->db->get('tahun_ajaran')->result_array();
+		$data['matakuliah'] = $this->db->query("SELECT matakuliah.id,matakuliah.kode_matkul, matakuliah.nama_matkul, matakuliah.sks, tahun_ajaran.tahun_ajaran
+													FROM matakuliah, tahun_ajaran
+													WHERE matakuliah.id_tahun_ajaran = tahun_ajaran.id")->result_array();
+
+		$this->load->view('template/header', $data);
+		$this->load->view('template/topbar', $data);
+		$this->load->view('template/sidebar', $data);
+		$this->load->view('admin/matakuliah', $data);
+		$this->load->view('template/footer');
+	}
+	public function add_matkul()
+	{
+		$kode_matkul = $this->input->post('kode_matkul');
+		$nama_matkul = $this->input->post('nama_matkul');
+		$sks = $this->input->post('sks');
+		$tahun_ajaran = $this->input->post('tahun_ajaran');
+
+		$data = [
+			'kode_matkul' => $kode_matkul,
+			'nama_matkul' => $nama_matkul,
+			'sks' => $sks,
+			'id_tahun_ajaran' => $tahun_ajaran
+		];
+
+		$this->db->insert('matakuliah', $data);
+		$this->session->set_flashdata('message', '<div class="alert alert-success" role="alert">
+			Matakuliah berhasi dibuat!
+		  </div>');
+		redirect('admin/matakuliah');
 	}
 }

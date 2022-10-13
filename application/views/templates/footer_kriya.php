@@ -159,39 +159,6 @@
 <script src="<?= base_url('assets/js/owl.js')  ?>"></script>
 <script src="<?= base_url('assets/js/wow.js')  ?>"></script>
 <script src="<?= base_url('assets/js/script.js') ?>"></script>
-<script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-<script>
-    const ctx = document.getElementById('myChart').getContext('2d');
-    const myChart = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels: ['AK 1', 'AK 2', 'AK 3', 'AK 4', 'AK 5', 'AK 6', 'AK 7', 'AK 8', 'AK 9'],
-            datasets: [{
-                label: 'Lulusan Akademi Komunitas Negeri Seni dan Budaya Yogyakarta',
-                data: [76, 80, 79, 87, 76, 72, 71, 79, 77],
-                backgroundColor: [
-                    'rgba(255, 15, 104, 0.2)',
-                    'rgba(255, 130, 164, 0.2)',
-                    'rgba(255, 150, 204, 0.2)',
-                    'rgba(255, 100, 64, 0.2)',
-                    'rgba(255, 219, 14, 0.2)',
-                    'rgba(255, 48, 94, 0.2)',
-                    'rgba(255, 71, 14, 0.2)',
-                    'rgba(255, 83, 84, 0.2)',
-                    'rgba(255, 112, 44, 0.2)'
-                ],
-                hoverOffset: 4
-            }]
-        },
-        options: {
-            scales: {
-                y: {
-                    beginAtZero: true
-                }
-            }
-        }
-    });
-</script>
 
 <script>
     AOS.init();

@@ -41,10 +41,9 @@
         <div class="call-to-action-four" style="background-image:url(assets/images/resource/quote-widget.jpg);">
             <div class="title">Hubungi kami</div>
 
-            <div class="number"><span class="flaticon-phone-receiver"></span> +001-345-6789-00</div>
+            <div class="number"><span class="flaticon-phone-receiver"></span>+6281348000045</div>
             <ul class="social-style-one">
-                <li><a class="fab fa-facebook-f"
-                        href="https://www.facebook.com/Akademi-Komunitas-Negeri-Seni-dan-Budaya-Yogyakarta-105047325048412"></a>
+                <li><a class="fab fa-facebook-f" href="https://www.facebook.com/Akademi-Komunitas-Negeri-Seni-dan-Budaya-Yogyakarta-105047325048412"></a>
                 </li>
                 <li><a class="fab fa-instagram" href="https://www.instagram.com/aknsb.yogyakarta/"></a></li>
                 <li><a class="fas fa-envelope" href="mailto:info@aknyogya.ac.id"></a></li>

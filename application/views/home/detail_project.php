@@ -1,11 +1,11 @@
         <!--Page Title-->
-        <section class="page-title" style="background-image:url(images/background/featured-2-bg.jpg);">
+        <section class="page-title1" style="background-image:url(images/background/featured-2-bg.jpg);">
             <div class="auto-container">
                 <h1>Project Details</h1>
             </div>
 
             <!--page-info-->
-            <div class="page-info">
+            <div class="page-info1">
                 <div class="auto-container">
                     <div class="row clearfix">
 
@@ -46,10 +46,7 @@
                                 <div class="carousel-outer">
 
                                     <ul class="image-carousel">
-                                        <li><a href="<?= base_url() ?>assets/images/resource/project-big-image-1.jpg"
-                                                class="lightbox-image" title="Image Caption Here"><img
-                                                    src="<?= base_url() ?>assets/images/resource/project-big-image-1.jpg"
-                                                    alt=""></a></li>
+                                        <li><a href="<?= base_url() ?>assets/images/resource/project-big-image-1.jpg" class="lightbox-image" title="Image Caption Here"><img src="<?= base_url() ?>assets/images/resource/project-big-image-1.jpg" alt=""></a></li>
                                     </ul>
 
                                 </div>

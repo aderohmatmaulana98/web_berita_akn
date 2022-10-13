@@ -1,11 +1,11 @@
 <!--Page Title-->
-<section class="page-title" style="background-image:url(images/background/featured-2-bg.jpg);">
+<section class="page-title1" style="background-image:url(images/background/featured-2-bg.jpg);">
     <div class="auto-container">
         <h1>Portfolio</h1>
     </div>
 
     <!--page-info-->
-    <div class="page-info">
+    <div class="page-info1">
         <div class="auto-container">
             <div class="row clearfix">
 
@@ -53,8 +53,6 @@
                             Process</span></li>
                     <li class="filter" data-role="button" data-filter=".chemical"><span class="txt">Chemical
                             Research</span></li>
-                    <li class="filter" data-role="button" data-filter=".engineering"><span class="txt">Metal
-                            Engineering</span></li>
                 </ul>
             </div>
 
@@ -69,11 +67,8 @@
                         <div class="overlay-one">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="<?= base_url() ?>assets/images/gallery/13.jpg"
-                                        class="lightbox-image proj-link" title="Image Caption Here"><span
-                                            class="fa fa-search"></span></a>
-                                    <a href="<?= base_url('home/detail_project') ?>" class="proj-link"><span
-                                            class="fa fa-link"></span></a>
+                                    <a href="<?= base_url() ?>assets/images/gallery/13.jpg" class="lightbox-image proj-link" title="Image Caption Here"><span class="fa fa-search"></span></a>
+                                    <a href="<?= base_url('home/detail_project') ?>" class="proj-link"><span class="fa fa-link"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -82,8 +77,7 @@
                 </div>
 
                 <!--Default Portfolio Item-->
-                <div
-                    class="col-lg-4 col-md-4 col-sm-6 col-xs-12 default-portfolio-item masonry-item all agriculture chemical">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 default-portfolio-item masonry-item all agriculture chemical">
                     <div class="inner-box">
                         <figure class="image-box"><img src="<?= base_url() ?>assets/images/gallery/14.jpg" alt="">
                         </figure>
@@ -91,11 +85,8 @@
                         <div class="overlay-one">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="<?= base_url() ?>assets/images/gallery/14.jpg"
-                                        class="lightbox-image proj-link" title="Image Caption Here"><span
-                                            class="fa fa-search"></span></a>
-                                    <a href="portfolio-details.html" class="proj-link"><span
-                                            class="fa fa-link"></span></a>
+                                    <a href="<?= base_url() ?>assets/images/gallery/14.jpg" class="lightbox-image proj-link" title="Image Caption Here"><span class="fa fa-search"></span></a>
+                                    <a href="portfolio-details.html" class="proj-link"><span class="fa fa-link"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -104,8 +95,7 @@
                 </div>
 
                 <!--Default Portfolio Item-->
-                <div
-                    class="col-lg-4 col-md-4 col-sm-6 col-xs-12 default-portfolio-item masonry-item all flooring tile-marble furniture lighting">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 default-portfolio-item masonry-item all flooring tile-marble furniture lighting">
                     <div class="inner-box">
                         <figure class="image-box"><img src="<?= base_url() ?>assets/images/gallery/15.jpg" alt="">
                         </figure>
@@ -113,11 +103,8 @@
                         <div class="overlay-one">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="<?= base_url() ?>assets/images/gallery/15.jpg"
-                                        class="lightbox-image proj-link" title="Image Caption Here"><span
-                                            class="fa fa-search"></span></a>
-                                    <a href="portfolio-details.html" class="proj-link"><span
-                                            class="fa fa-link"></span></a>
+                                    <a href="<?= base_url() ?>assets/images/gallery/15.jpg" class="lightbox-image proj-link" title="Image Caption Here"><span class="fa fa-search"></span></a>
+                                    <a href="portfolio-details.html" class="proj-link"><span class="fa fa-link"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -134,11 +121,8 @@
                         <div class="overlay-one">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="<?= base_url() ?>assets/images/gallery/16.jpg"
-                                        class="lightbox-image proj-link" title="Image Caption Here"><span
-                                            class="fa fa-search"></span></a>
-                                    <a href="portfolio-details.html" class="proj-link"><span
-                                            class="fa fa-link"></span></a>
+                                    <a href="<?= base_url() ?>assets/images/gallery/16.jpg" class="lightbox-image proj-link" title="Image Caption Here"><span class="fa fa-search"></span></a>
+                                    <a href="portfolio-details.html" class="proj-link"><span class="fa fa-link"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -147,8 +131,7 @@
                 </div>
 
                 <!--Default Portfolio Item-->
-                <div
-                    class="col-lg-4 col-md-4 col-sm-6 col-xs-12 default-portfolio-item masonry-item all agriculture chemical">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 default-portfolio-item masonry-item all agriculture chemical">
                     <div class="inner-box">
                         <figure class="image-box"><img src="<?= base_url() ?>assets/images/gallery/17.jpg" alt="">
                         </figure>
@@ -156,11 +139,8 @@
                         <div class="overlay-one">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="<?= base_url() ?>assets/images/gallery/17.jpg"
-                                        class="lightbox-image proj-link" title="Image Caption Here"><span
-                                            class="fa fa-search"></span></a>
-                                    <a href="portfolio-details.html" class="proj-link"><span
-                                            class="fa fa-link"></span></a>
+                                    <a href="<?= base_url() ?>assets/images/gallery/17.jpg" class="lightbox-image proj-link" title="Image Caption Here"><span class="fa fa-search"></span></a>
+                                    <a href="portfolio-details.html" class="proj-link"><span class="fa fa-link"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -169,8 +149,7 @@
                 </div>
 
                 <!--Default Portfolio Item-->
-                <div
-                    class="col-lg-4 col-md-4 col-sm-6 col-xs-12 default-portfolio-item masonry-item all flooring tile-marble furniture lighting">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 default-portfolio-item masonry-item all flooring tile-marble furniture lighting">
                     <div class="inner-box">
                         <figure class="image-box"><img src="<?= base_url() ?>assets/images/gallery/18.jpg" alt="">
                         </figure>
@@ -178,11 +157,8 @@
                         <div class="overlay-one">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="<?= base_url() ?>assets/images/gallery/18.jpg"
-                                        class="lightbox-image proj-link" title="Image Caption Here"><span
-                                            class="fa fa-search"></span></a>
-                                    <a href="portfolio-details.html" class="proj-link"><span
-                                            class="fa fa-link"></span></a>
+                                    <a href="<?= base_url() ?>assets/images/gallery/18.jpg" class="lightbox-image proj-link" title="Image Caption Here"><span class="fa fa-search"></span></a>
+                                    <a href="portfolio-details.html" class="proj-link"><span class="fa fa-link"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -199,11 +175,8 @@
                         <div class="overlay-one">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="<?= base_url() ?>assets/images/gallery/19.jpg"
-                                        class="lightbox-image proj-link" title="Image Caption Here"><span
-                                            class="fa fa-search"></span></a>
-                                    <a href="portfolio-details.html" class="proj-link"><span
-                                            class="fa fa-link"></span></a>
+                                    <a href="<?= base_url() ?>assets/images/gallery/19.jpg" class="lightbox-image proj-link" title="Image Caption Here"><span class="fa fa-search"></span></a>
+                                    <a href="portfolio-details.html" class="proj-link"><span class="fa fa-link"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -220,11 +193,8 @@
                         <div class="overlay-one">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="<?= base_url() ?>assets/images/gallery/20.jpg"
-                                        class="lightbox-image proj-link" title="Image Caption Here"><span
-                                            class="fa fa-search"></span></a>
-                                    <a href="portfolio-details.html" class="proj-link"><span
-                                            class="fa fa-link"></span></a>
+                                    <a href="<?= base_url() ?>assets/images/gallery/20.jpg" class="lightbox-image proj-link" title="Image Caption Here"><span class="fa fa-search"></span></a>
+                                    <a href="portfolio-details.html" class="proj-link"><span class="fa fa-link"></span></a>
                                 </div>
                             </div>
                         </div>
@@ -241,11 +211,8 @@
                         <div class="overlay-one">
                             <div class="overlay-inner">
                                 <div class="content">
-                                    <a href="<?= base_url() ?>assets/images/gallery/21.jpg"
-                                        class="lightbox-image proj-link" title="Image Caption Here"><span
-                                            class="fa fa-search"></span></a>
-                                    <a href="portfolio-details.html" class="proj-link"><span
-                                            class="fa fa-link"></span></a>
+                                    <a href="<?= base_url() ?>assets/images/gallery/21.jpg" class="lightbox-image proj-link" title="Image Caption Here"><span class="fa fa-search"></span></a>
+                                    <a href="portfolio-details.html" class="proj-link"><span class="fa fa-link"></span></a>
                                 </div>
                             </div>
                         </div>

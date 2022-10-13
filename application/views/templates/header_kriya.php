@@ -56,7 +56,7 @@
                     <div class="clearfix">
 
                         <div class="pull-left logo-outer">
-                            <div class="logo"><a href="index.html"><img src="<?= base_url('assets/images/akn/logo_akn_tulisan_hitam.png') ?>" width="170px" height="70px" alt="AKN" title="AKN"></a></div>
+                            <div class="logo"><a href="index.html"><img src="<?= base_url('assets/images/akn/logo_akn_tulisan_hitam.png') ?>" width="200px" height="60px" alt="AKN" title="AKN"></a></div>
                         </div>
 
                         <div class="pull-right upper-right clearfix">

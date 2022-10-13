@@ -3231,7 +3231,7 @@ img {
 
 .main-footer {
 	position: relative;
-	color: #c9c9c9;
+	color:#f3f2f1;
 	background-color: #001020;
 	font-family: 'Roboto', sans-serif;
 	background-image: url('assets/images/akn/footer-bg.jpg');
@@ -3453,7 +3453,7 @@ img {
 	top: 0px;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 23, 45, 0.97);
+	background: #a2754e;
 }
 
 .footer-style-two .brighton-widget .text {
@@ -3463,7 +3463,7 @@ img {
 }
 
 .footer-style-two .footer-bottom {
-	background-color: #00101f;
+	background-color: #a2754e;
 	border-top: 0px;
 }
 
@@ -4587,6 +4587,12 @@ img {
 	background-color: #103d68;
 	;
 }
+.service-block-five2 {
+	position: relative;
+	margin-bottom: 30px;
+	background-color: #a2754e;
+	;
+}
 
 .service-block-five .inner-box {
 	position: relative;
@@ -5426,6 +5432,14 @@ img {
 	background-size: cover;
 	padding: 90px 0px 140px;
 }
+.page-title1 {
+	position: relative;
+	background-attachment: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 90px 0px 140px;
+}
 
 .page-title:before {
 	position: absolute;
@@ -5435,10 +5449,26 @@ img {
 	width: 100%;
 	height: 100%;
 	display: block;
-	background-color: rgba(16, 61, 104, 0.85);
+	background-color: #345a7f;
+}
+.page-title1:before {
+	position: absolute;
+	content: '';
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	display: block;
+	background-color: #a2754e;
 }
 
 .page-title h1 {
+	color: #ffffff;
+	font-size: 50px;
+	font-weight: 600;
+	text-align: center;
+}
+.page-title1 h1 {
 	color: #ffffff;
 	font-size: 50px;
 	font-weight: 600;
@@ -5453,12 +5483,30 @@ img {
 	padding: 16px 0px;
 	background-color: rgba(0, 26, 57, 0.85);
 }
+.page-title1 .page-info1 {
+	position: absolute;
+	left: 0px;
+	bottom: 0px;
+	width: 100%;
+	padding: 16px 0px;
+	background-color: #c1ab86;
+}
 
 .page-title .page-info .bread-crumb {
 	position: relative;
 }
+.page-title1 .page-info1 .bread-crumb {
+	position: relative;
+}
 
 .page-title .page-info .bread-crumb li {
+	position: relative;
+	color: #ffffff;
+	font-weight: 600;
+	margin-right: 30px;
+	display: inline-block;
+}
+.page-title1 .page-info1 .bread-crumb li {
 	position: relative;
 	color: #ffffff;
 	font-weight: 600;
@@ -5473,12 +5521,28 @@ img {
 	right: -18px;
 	top: 1px;
 }
+.page-title1 .page-info1 .bread-crumb li:first-child::after {
+	position: absolute;
+	content: '\f105';
+	font-family: 'FontAwesome';
+	right: -18px;
+	top: 1px;
+}
 
 .page-title .page-info .bread-crumb li.active {
 	color: #FF9933;
 }
+.page-title1 .page-info1 .bread-crumb li.active {
+	color: #ffffff;
+}
 
 .page-title .page-info .bread-crumb li a {
+	position: relative;
+	color: #ffffff;
+	font-size: 15px;
+	font-weight: 600;
+}
+.page-title1 .page-info1 .bread-crumb li a {
 	position: relative;
 	color: #ffffff;
 	font-size: 15px;
@@ -5489,8 +5553,17 @@ img {
 	position: relative;
 	text-align: right;
 }
+.page-title1 .social-nav {
+	position: relative;
+	text-align: right;
+}
 
 .page-title .social-nav li {
+	position: relative;
+	display: inline-block;
+	margin-right: 15px;
+}
+.page-title1 .social-nav li {
 	position: relative;
 	display: inline-block;
 	margin-right: 15px;
@@ -5506,8 +5579,21 @@ img {
 	-ms-transition: all 0.3s ease;
 	-o-transition: all 0.3s ease;
 }
+.page-title1 .social-nav li a {
+	position: relative;
+	color: #aaaaaa;
+	font-size: 14px;
+	transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+}
 
 .page-title .social-nav li a:hover {
+	color: #FF9933;
+}
+.page-title1 .social-nav li a:hover {
 	color: #FF9933;
 }
 

@@ -392,6 +392,7 @@ class Home extends CI_Controller
 			'nama_lengkap' => $nama_lengkap,
 			'email' => $email,
 			'pertanyaan' => $pertanyaan,
+			'jawaban' => NULL,
 			'status' => 0,
 			'date_created' => time()
 		];
@@ -408,9 +409,26 @@ class Home extends CI_Controller
 
 	public function mencari_mahasiswa()
 	{
-		$this->load->view('templates/header');
-		$this->load->view('home/mencari_mahasiswa');
-		$this->load->view('templates/footer');
+
+		$data['users'] = $this->db->query("SELECT * FROM users WHERE role_id = 4 AND nip = NULL")->row_array();
+		$this->load->view('templates/header', $data);
+		$this->load->view('home/mencari_mahasiswa', $data);
+		$this->load->view('templates/footer', $data);
+	}
+	public function mencari_mahasiswa1()
+	{
+		$nip = $this->input->post('nim');
+		if ($nip != NULL) {
+			$data['users'] = $this->db->query("SELECT * FROM users WHERE role_id = 4 AND nip = $nip")->row_array();
+			$this->load->view('templates/header', $data);
+			$this->load->view('home/mencari_mahasiswa', $data);
+			$this->load->view('templates/footer', $data);
+		} else {
+			$this->session->set_flashdata('message', '<div>
+        Data tidak ditemukan !
+      </div>');
+			redirect('home/mencari_mahasiswa');
+		}
 	}
 
 	public function lulusan()
@@ -429,9 +447,10 @@ class Home extends CI_Controller
 
 	public function datadosen()
 	{
-		$this->load->view('templates/header');
-		$this->load->view('home/datadosen');
-		$this->load->view('templates/footer');
+		$data['data_dosen'] = $this->db->query('SELECT * FROM users WHERE role_id = 2')->result_array();
+		$this->load->view('templates/header', $data);
+		$this->load->view('home/datadosen', $data);
+		$this->load->view('templates/footer', $data);
 	}
 
 
@@ -439,6 +458,12 @@ class Home extends CI_Controller
 	{
 		$this->load->view('templates/header');
 		$this->load->view('home/kepuasan');
+		$this->load->view('templates/footer');
+	}
+	public function kepuasan_dosen()
+	{
+		$this->load->view('templates/header');
+		$this->load->view('home/kepuasan_dosen');
 		$this->load->view('templates/footer');
 	}
 
@@ -461,7 +486,6 @@ class Home extends CI_Controller
 	{
 		$this->load->view('templates/header');
 		$this->load->view('home/detail_project');
-		$this->load->view('templates/sidebar');
 		$this->load->view('templates/footer');
 	}
 }

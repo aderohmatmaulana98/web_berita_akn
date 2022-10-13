@@ -2,7 +2,7 @@
 
 <section class="page-title1" style="background-image:url(assets/images/background/featured-2-bg.jpg);">
     <div class="auto-container">
-        <h1>Lulusan Mahasiswa Kriya</h1>
+        <h1>Kepuasan Mahasiswa Kriya</h1>
     </div>
 
     <!--page-info-->
@@ -12,8 +12,8 @@
 
                 <div class="col-md-6 col-sm-6 col-xs-12">
                     <ul class="bread-crumb clearfix">
-                        <li><a href="<?= base_url('home'); ?>">Home > Lulusan Mahasiswa Kriya</a></li>
-                        <li class="active">Mahasiswa </li>
+                        <li><a href="<?= base_url('home'); ?>">Home > Kepuasan Kriya</a></li>
+                        <li class="active">Kepuasan </li>
                     </ul>
                 </div>
 
@@ -28,10 +28,13 @@
     <div class="auto-container">
         <div data-aos="fade-right">
             <div class="row clearfix">
-                <div style="height:500px ;width: 500px ; margin: 0 auto;">
-                    <canvas id="myChart" width="10" height="10"></canvas>
+                <div>
+                    <h2 class="text-center">Formulir Kepuasan Dosen</h2>
+                    <img src="<?= base_url('assets/images/akn/ilustration/kepuasan2.png') ?>" height="300" width="300" alt="" srcset="">
                 </div>
-
+                <div>
+                    <p>Untuk mengisi formulir kepuasan dosen silahkan klik link berikut : <a target="_blank" href="https://forms.gle/GG3p2dJ8gApKdXqp6">Klik disini</a> </p>
+                </div>
             </div>
         </div>
     </div>
